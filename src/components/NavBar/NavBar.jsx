@@ -1,13 +1,15 @@
-import React from 'react';
+import React from "react";
+import './NavBar.css';
+import Logo from "./Logo";
+import Menu from "./Menu";
 
 const NavBar = () => {
     return(
-        <ul>
-            <li>Hola</li>
-            <li>como</li>
-            <li>estas</li>
-        </ul>
-    )
-}
+        <nav className="nav">
+            <Logo />
+            <Menu />
+        </nav>
+    );
+};
 
-export { NavBar }
+export default NavBar;
