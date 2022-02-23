@@ -2,11 +2,9 @@ import React from "react";
 
 const CartWidget = () => {
     return(
-        <div className="carrito">
-            <button>
+            <button className="carrito">
                 <img src="./media/carrito.png" alt="carrito" className="imgCart" />
             </button>
-        </div>
     );
 };
 

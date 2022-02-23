@@ -1,11 +1,11 @@
 import React from "react";
-import Menu from "./Menu";
+import Seccion from "./Seccion"
 import './ItemListContainer.css';
 
 const ItemListContainer = () => {
     return(
-        <div>
-            <Menu />
+        <div className="main">
+            <Seccion />
         </div>
     );
 };
