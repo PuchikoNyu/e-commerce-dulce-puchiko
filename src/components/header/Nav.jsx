@@ -8,7 +8,7 @@ const Nav = () => {
                 <button className="dropbtn">Productos
                     <i className="fa fa-caret-down"></i>
                 </button>
-                <div class="dropdown-content">
+                <div className="dropdown-content">
                     <a href="#" className='enlace'>Capilar</a>
                     <a href="#" className='enlace'>Corporal</a>
                     <a href="#" className='enlace'>Accesorios</a>
