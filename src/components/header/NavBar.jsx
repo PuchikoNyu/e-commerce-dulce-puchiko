@@ -1,13 +1,13 @@
 import React from "react";
-import './NavBar.css';
 import Logo from "./Logo";
-import Menu from "./Menu";
+import Nav from "./Nav";
+import './NavBar.css';
 
 const NavBar = () => {
     return(
         <nav className="nav">
             <Logo />
-            <Menu />
+            <Nav />
         </nav>
     );
 };

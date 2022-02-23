@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Menu = () => {
+const Nav = () => {
     return(
         <nav className='divNav'>
             <a href="#" className='enlace'>Inicio</a>
@@ -20,4 +20,4 @@ const Menu = () => {
     );
 };
 
-export default Menu;
+export default Nav;
