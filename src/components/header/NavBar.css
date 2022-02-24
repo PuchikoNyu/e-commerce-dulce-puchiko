@@ -7,11 +7,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2fbdb6;
+    background-color: #272525;
 }
 .imgLogo {
     width: 150px;
     height: 150px;
+    background-color: #fafafa;
+    border-radius: 100%;
+    margin: 2px 0 1px 0;
 }
 h1 {
     color: #272525;
@@ -26,7 +29,7 @@ h1 {
 }
 .enlace {
     font-size: 16px;
-    color: #272525;
+    color: #fafafa;
     justify-items: baseline;
     text-decoration: inherit;
     font-weight: bold;
@@ -72,15 +75,15 @@ h1 {
     display: block;
 }
 .carrito {
-    border: 2px solid #2fbdb6;
+    border: 2px solid #fafafa;
     border-radius: 5px;
     margin: 2px;
 }
 .imgCart {
-    border: 2px solid #fafafa;
+    border: 2px solid #272525;
     border-radius: 5px;
     display: flex;
     width: 40px;
     height: 40px;
-    background-color: #2fbdb6;
+    background-color: #fafafa;
 }

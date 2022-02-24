@@ -7,7 +7,7 @@ footer {
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: #2fbdb6;
+    background-color: #272525;
     height: 100px;
     align-items: center;
     position: absolute;
@@ -16,7 +16,7 @@ footer {
 
 .enlace {
     font-size: 16px;
-    color: #272525;
+    color: #fafafa;
     justify-items: baseline;
     text-decoration: inherit;
     font-weight: bold;

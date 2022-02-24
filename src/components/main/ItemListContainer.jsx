@@ -2,7 +2,7 @@ import React from "react";
 import Seccion from "./Seccion"
 import './ItemListContainer.css';
 
-const ItemListContainer = () => {
+const ItemListContainer = ( {saludo, nombre} ) => {
     return(
         <div className="main">
             <Seccion />

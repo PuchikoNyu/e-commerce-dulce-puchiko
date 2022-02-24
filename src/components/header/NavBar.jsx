@@ -4,13 +4,17 @@ import Nav from "./Nav";
 import CartWidget from "./CartWidget";
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = (props) => {
     return(
-        <nav className="nav">
-            <Logo />
-            <Nav />
-            <CartWidget />
-        </nav>
+        <>
+            <nav className="nav">
+                <Logo />
+                <Nav />
+                <CartWidget />
+            </nav>
+            <h1>{props.saludo}</h1>
+        </>
+
     );
 };
 

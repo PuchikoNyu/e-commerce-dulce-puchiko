@@ -4,10 +4,10 @@ import Cards from "./Cards";
 
 const Seccion = () => {
     return(
-        <section>
+        <div className="seccion">
             <Carrousel />
             <Cards />
-        </section>
+        </div>
     );
 };
 

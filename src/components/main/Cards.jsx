@@ -2,8 +2,8 @@ import React from "react";
 
 const Cards = () => {
     return(
-        <section className="container">
-            <div id="contProd"></div>
+        <section>
+            <p>ACA VAN MIS PRODUCTOS</p>
         </section>
     );
 };

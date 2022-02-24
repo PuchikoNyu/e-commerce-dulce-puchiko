@@ -5,26 +5,24 @@ const Carrousel = () => {
         <div className="container">
             <ul className="slider">
                 <li id="slide1">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/car.jpg" />
+                    <img src="./media/nankurunaisa.jpeg" />
                 </li>
                 <li id="slide2">
-                    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3947459/sunset.jpg" />
+                    <img src="./media/capilares.jpeg" />
                 </li>
                 <li id="slide3">
-                    <h1>Ejemplo con otros elementos</h1>
-                    <p>Esto es un párrafo de ejemplo para comprobar que podemos meter cualquier tipo de elementos en el slider</p>
-                    <a href="https://kikopalomares.com/">¡Corre a mi web para más contenido!</a>
+                    <img src="./media/jaboness.jpeg" />
                 </li>
             </ul>
             <ul className="menu">
                 <li>
-                    <a href="#slide1">1</a>
+                    <a href="#slide1"></a>
                 </li>
                 <li>
-                    <a href="#slide2">2</a>
+                    <a href="#slide2"></a>
                 </li>
                 <li>
-                    <a href="#slide3">3</a>
+                    <a href="#slide3"></a>
                 </li>
             </ul>
         </div>
