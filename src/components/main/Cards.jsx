@@ -2,7 +2,9 @@ import React from "react";
 
 const Cards = () => {
     return(
-        <div>Hola</div>
+        <section className="container">
+            <div id="contProd"></div>
+        </section>
     );
 };
 

@@ -21,7 +21,7 @@
 }
 .container {
     margin: auto;
-    background-color: white;
+    background-color: #fafafa;
     width: 800px;
     padding: 30px;
 }
@@ -44,7 +44,7 @@ ul.slider li {
     width: inherit;
     height: inherit;
     transition: opacity .5s;
-    background: #fff;
+    background: #fafafa;
 }
 ul.slider li img {
     width: 100%;
@@ -69,7 +69,7 @@ ul.slider li:target {
     display: inline-block;
     color: white;
     text-decoration: none;
-    background-color: grey;
+    background-color: #2fbdb6;
     padding: 10px;
     width: 20px;
     height: 20px;
