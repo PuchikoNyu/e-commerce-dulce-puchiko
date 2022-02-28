@@ -5,7 +5,7 @@ const Cards = () => {
 
     return (
         <div className="tarjeta">
-            <div> productos... </div>
+            <div> ... PRODUCTOS ... </div>
             <ItemCount />
         </div>
     );

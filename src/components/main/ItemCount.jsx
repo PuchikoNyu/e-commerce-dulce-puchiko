@@ -23,9 +23,10 @@ function ItemCount ({}) {
 
     return (
         <div>
-            <button onClick= { resta }>-</button>
+            <button onClick= { resta } className="botonUno">-</button>
             <label> { contador } </label>
-            <button onClick= { suma }>+</button>
+            <button onClick= { suma } className="botonUno">+</button>
+            <button className="botonUno">Agregar</button>
         </div>
     )
 };
