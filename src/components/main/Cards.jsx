@@ -1,10 +1,13 @@
 import React from "react";
+import ItemCount from './ItemCount';
 
 const Cards = () => {
-    return(
-        <section>
-            <p>ACA VAN MIS PRODUCTOS</p>
-        </section>
+
+    return (
+        <div className="tarjeta">
+            <div> productos... </div>
+            <ItemCount />
+        </div>
     );
 };
 
