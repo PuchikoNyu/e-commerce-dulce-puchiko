@@ -2,14 +2,23 @@ import React from "react";
 import {useState} from 'react';
 
 function ItemCount ({}) {
+
     const [contador, setCount]= useState(0)
 
     const suma = () => {
-        setCount (contador+1)
+        if (contador >= 0 && contador <5) {
+            setCount (contador+1)
+        } else {
+            console.log(" no se puede")
+        }
     }
 
     const resta = () => {
-        setCount (contador-1)
+        if (contador > 0) {
+            setCount (contador-1)
+        } else {
+            console.log(" no se puede")
+        }
     }
 
     return (
