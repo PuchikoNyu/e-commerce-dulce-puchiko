@@ -1,11 +1,11 @@
 import React from "react";
-import Seccion from "./Seccion"
+import Section from "./Section";
 import './ItemListContainer.css';
 
 const ItemListContainer = ( {saludo, nombre} ) => {
     return(
         <div className="main">
-            <Seccion />
+            <Section />
         </div>
     );
 };

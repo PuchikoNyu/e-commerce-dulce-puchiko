@@ -1,14 +1,13 @@
 import './App.css';
 import NavBar from './components/header/NavBar';
-import ItemListContainer from './components/main/ItemListContainer';
 import Footer from './components/footer/Footer';
-import productos from './components/main/stock.json';
+import ItemListContainer from './components/main/ItemListContainer';
 
 function App () {
   return (
     <div className="App">
       <NavBar saludo={'Bienvenido!!!'}/>
-      <ItemListContainer stock={productos}/>
+      <ItemListContainer />
       <Footer />
     </div>
   );

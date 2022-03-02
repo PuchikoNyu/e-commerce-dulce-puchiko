@@ -85,13 +85,21 @@ ul.slider li:target {
 .tarjeta {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    justify-items: center;
     background-color: #272525;
     color: #fafafa;
-    width: 100px;
-    height: 150px;
+    width: 200px;
+    height: 500px;
+    border: #272525;
+    border-radius: 4px;
+    margin: 2px;
+    padding: 2px;
+    justify-content: space-evenly;
 }
 .botonUno {
     color: #272525;
+}
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }

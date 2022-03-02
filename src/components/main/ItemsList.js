@@ -1,3 +1,4 @@
+export const productos =
 [{
         "id": 1,
         "categoria": "facial",
@@ -153,62 +154,7 @@
         "stock": 300
     },
     {
-        "id": 14,
-        "categoria": "corporal",
-        "subcategoria": "jabon",
-        "variedad": "esenciales",
-        "tipo": "tilo",
-        "nombre": "Jabón Esencial de Tilo",
-        "precio": 400,
-        "img": "./media/jabones.jpeg",
-        "stock": 300
-    },
-    {
         "id": 15,
-        "categoria": "corporal",
-        "subcategoria": "jabon",
-        "variedad": "esenciales",
-        "tipo": "oleo 31",
-        "nombre": "Jabón Esencial de Oleo 31",
-        "precio": 400,
-        "img": "./media/jabones.jpeg",
-        "stock": 300
-    },
-    {
-        "id": 16,
-        "categoria": "corporal",
-        "subcategoria": "jabon",
-        "variedad": "esenciales",
-        "tipo": "coco",
-        "nombre": "Jabón Esencial de Coco",
-        "precio": 400,
-        "img": "./media/jabones.jpeg",
-        "stock": 300
-    },
-    {
-        "id": 17,
-        "categoria": "corporal",
-        "subcategoria": "jabon",
-        "variedad": "especiales",
-        "tipo": "calendula",
-        "nombre": "Jabón Esencial de Caléndula",
-        "precio": 550,
-        "img": "./media/jabCal.jpeg",
-        "stock": 300
-    },
-    {
-        "id": 18,
-        "categoria": "corporal",
-        "subcategoria": "jabon",
-        "variedad": "especiales",
-        "tipo": "jazmin",
-        "nombre": "Jabón Esencial de Jazmín",
-        "precio": 5500,
-        "img": "./media/jabJaz.jpeg",
-        "stock": 300
-    },
-    {
-        "id": 19,
         "categoria": "corporal",
         "subcategoria": "pasta dental",
         "variedad": "vidrio",
@@ -219,7 +165,62 @@
         "stock": 100
     },
     {
+        "id": 16,
+        "categoria": "corporal",
+        "subcategoria": "jabon",
+        "variedad": "esenciales",
+        "tipo": "tilo",
+        "nombre": "Jabón Esencial de Tilo",
+        "precio": 400,
+        "img": "./media/jabones.jpeg",
+        "stock": 300
+    },
+    {
+        "id": 17,
+        "categoria": "corporal",
+        "subcategoria": "jabon",
+        "variedad": "esenciales",
+        "tipo": "oleo 31",
+        "nombre": "Jabón Esencial de Oleo 31",
+        "precio": 400,
+        "img": "./media/jabones.jpeg",
+        "stock": 300
+    },
+    {
+        "id": 18,
+        "categoria": "corporal",
+        "subcategoria": "jabon",
+        "variedad": "esenciales",
+        "tipo": "coco",
+        "nombre": "Jabón Esencial de Coco",
+        "precio": 400,
+        "img": "./media/jabones.jpeg",
+        "stock": 300
+    },
+    {
+        "id": 19,
+        "categoria": "corporal",
+        "subcategoria": "jabon",
+        "variedad": "especiales",
+        "tipo": "calendula",
+        "nombre": "Jabón Esencial de Caléndula",
+        "precio": 550,
+        "img": "./media/jabCal.jpeg",
+        "stock": 300
+    },
+    {
         "id": 20,
+        "categoria": "corporal",
+        "subcategoria": "jabon",
+        "variedad": "especiales",
+        "tipo": "jazmin",
+        "nombre": "Jabón Esencial de Jazmín",
+        "precio": 5500,
+        "img": "./media/jabJaz.jpeg",
+        "stock": 300
+    },
+    {
+        "id": 21,
         "categoria": "corporal",
         "subcategoria": "pasta dental",
         "variedad": "vidrio",
@@ -230,7 +231,7 @@
         "stock": 100
     },
     {
-        "id": 21,
+        "id": 22,
         "categoria": "corporal",
         "subcategoria": "desodorante",
         "variedad": "vidrio",
@@ -241,7 +242,7 @@
         "stock": 150
     },
     {
-        "id": 22,
+        "id": 23,
         "categoria": "corporal",
         "subcategoria": "desodorante",
         "variedad": "vidrio",
@@ -252,7 +253,7 @@
         "stock": 150
     },
     {
-        "id": 23,
+        "id": 24,
         "categoria": "accesorios",
         "subcategoria": "peines",
         "variedad": "madera",
@@ -263,7 +264,7 @@
         "stock": 100
     },
     {
-        "id": 24,
+        "id": 25,
         "categoria": "accesorios",
         "subcategoria": "peines",
         "variedad": "madera",
@@ -274,7 +275,7 @@
         "stock": 50
     },
     {
-        "id": 25,
+        "id": 26,
         "categoria": "accesorios",
         "subcategoria": "peines",
         "variedad": "madera",
@@ -285,7 +286,7 @@
         "stock": 50
     },
     {
-        "id": 26,
+        "id": 27,
         "categoria": "accesorios",
         "subcategoria": "esponja",
         "variedad": "vegetal",
@@ -296,7 +297,7 @@
         "stock": 200
     },
     {
-        "id": 27,
+        "id": 28,
         "categoria": "accesorios",
         "subcategoria": "cepillo",
         "variedad": "madera",
@@ -307,7 +308,7 @@
         "stock": 100
     },
     {
-        "id": 28,
+        "id": 29,
         "categoria": "accesorios",
         "subcategoria": "cepillo",
         "variedad": "bambu",
@@ -318,7 +319,7 @@
         "stock": 300
     },
     {
-        "id": 29,
+        "id": 30,
         "categoria": "accesorios",
         "subcategoria": "porta cepillo",
         "variedad": "bambu",
@@ -329,7 +330,7 @@
         "stock": 100
     },
     {
-        "id": 30,
+        "id": 31,
         "categoria": "accesorios",
         "subcategoria": "porta cepillo",
         "variedad": "bambu",
@@ -340,7 +341,7 @@
         "stock": 200
     },
     {
-        "id": 31,
+        "id": 32,
         "categoria": "accesorios",
         "subcategoria": "jabonera",
         "variedad": "bambu",
@@ -351,7 +352,7 @@
         "stock": 150
     },
     {
-        "id": 32,
+        "id": 33,
         "categoria": "otros",
         "subcategoria": "almohadilla",
         "variedad": "semillas",
@@ -362,7 +363,7 @@
         "stock": 50
     },
     {
-        "id": 33,
+        "id": 34,
         "categoria": "otros",
         "subcategoria": "almohadilla",
         "variedad": "semillas",
@@ -372,4 +373,18 @@
         "img": "./media/almGrande.jpeg",
         "stock": 50
     }
-    ]
+    ];
+
+export const getFetch = new Promise ((resolve, reject)=>{
+
+        let url = 'flor.com';
+
+        if (url === 'flor.com') {
+            setTimeout(() =>{
+                resolve(productos);
+            }, 3000);
+            
+        } else {
+            reject ("404 not found")
+        }
+    });
