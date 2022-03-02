@@ -32,6 +32,7 @@ const Cards = () => {
                         <p> Precio: ${prod.precio} </p>
                         <ItemCount />
                         <button className="botonUno">Agregar</button>
+                        <button className="botonUno">Descripción</button>
                     </div>
             ) }
         </div>
@@ -39,5 +40,3 @@ const Cards = () => {
 };
 
 export default Cards;
-
-// className="tarjeta"

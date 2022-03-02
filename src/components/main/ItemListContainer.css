@@ -91,9 +91,9 @@ ul.slider li:target {
     height: 500px;
     border: #272525;
     border-radius: 4px;
-    margin: 2px;
-    padding: 2px;
-    justify-content: space-evenly;
+    margin: 4px;
+    padding: 4px;
+    justify-content: space-between;
 }
 .botonUno {
     color: #272525;
@@ -101,5 +101,5 @@ ul.slider li:target {
 .items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
