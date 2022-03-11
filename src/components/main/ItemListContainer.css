@@ -10,7 +10,7 @@
     justify-content: flex-start;
     align-content: stretch;
     position: relative;
-    min-height: 79.5vh;
+    min-height: 78vh;
 }
 .seccion {
     display: flex;

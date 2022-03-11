@@ -15,9 +15,8 @@ const Cards = () => {
     .then((resp) => setProductos(resp))
     .catch(err => console.log(err))
     .finally(()=> setLoading(false))
-    }, [])
 
-    console.log(productos)
+    }, [])
     
     return (
         <div className="items">

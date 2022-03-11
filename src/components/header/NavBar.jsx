@@ -4,7 +4,7 @@ import Nav from "./Nav";
 import CartWidget from "./CartWidget";
 import './NavBar.css';
 
-const NavBar = (props) => {
+const NavBar = ({saludo}) => {
     return(
         <>
             <nav className="nav">
@@ -12,7 +12,7 @@ const NavBar = (props) => {
                 <Nav />
                 <CartWidget />
             </nav>
-            <h1>{props.saludo}</h1>
+            <h1>{saludo}</h1>
         </>
 
     );
