@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import ItemCount from './ItemCount';
 import { getFetch } from "./ItemsList";
 
@@ -6,17 +7,22 @@ const Cards = () => {
 
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
+    const { categoryId } = useParams()
 
     useEffect (() => {
-        getFetch
-    .then ((respuesta) => {
-    return respuesta
-})
-    .then((resp) => setProductos(resp))
-    .catch(err => console.log(err))
-    .finally(()=> setLoading(false))
 
-    }, [])
+        if (categoryId) {
+
+        } else {
+            getFetch
+            .then ((respuesta) => {
+            return respuesta
+            })
+            .then((resp) => setProductos(resp.filter(prod => prod.categoria === categoryId )))
+            .catch(err => console.log(err))
+            .finally(()=> setLoading(false))
+        }
+}, [categoryId])
     
     return (
         <div className="items">
@@ -31,7 +37,9 @@ const Cards = () => {
                         <p> Precio: ${prod.precio} </p>
                         <ItemCount />
                         <button className="botonUno">Agregar</button>
-                        <button className="botonUno">Descripción</button>
+                        <Link to={`description/${prod.Id}`} className="botonUno">
+                            <button>Descripción</button>
+                        </Link>
                     </div>
             ) }
         </div>

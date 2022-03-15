@@ -1,17 +1,18 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Nav = () => {
     return(
         <nav className='divNav'>
-            <a href="#" className='enlace'>Inicio</a>
+            <NavLink to="/" className='enlace'>Inicio</NavLink>
             <div className="dropdown">
                 <button className="dropbtn">Productos
                     <i className="fa fa-caret-down"></i>
                 </button>
                 <div className="dropdown-content">
-                    <a href="#" className='enlace'>Capilar</a>
-                    <a href="#" className='enlace'>Corporal</a>
-                    <a href="#" className='enlace'>Accesorios</a>
+                    <NavLink to="category/capilar" className='enlace'>Capilar</NavLink>
+                    <NavLink to="category/corporal" className='enlace'>Corporal</NavLink>
+                    <NavLink to="category/otros" className='enlace'>Accesorios</NavLink>
                 </div>
             </div>
             <a href="#" className='enlace'>Nosotros</a>

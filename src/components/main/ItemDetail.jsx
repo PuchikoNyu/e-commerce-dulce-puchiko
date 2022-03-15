@@ -1,5 +1,6 @@
 
 const ItemDetail = ({producto}) => {
+
     return (
         <div className="tarjeta">
             <img src={producto.img} alt={producto.nombre} />
