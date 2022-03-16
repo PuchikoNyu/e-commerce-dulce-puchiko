@@ -1,11 +1,13 @@
 import React from "react";
-import Section from "./Section";
+import Cards from "./Cards";
+import Carrousel from "./Carrousel";
 import './ItemListContainer.css';
 
 const ItemListContainer = ( {saludo, nombre} ) => {
     return(
         <div className="main">
-            <Section />
+            <Carrousel />
+            <Cards />
         </div>
     );
 };

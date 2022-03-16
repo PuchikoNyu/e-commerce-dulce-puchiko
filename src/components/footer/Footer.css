@@ -12,6 +12,7 @@ footer {
     align-items: center;
     position: absolute;
     width: 100%;
+    margin-top: 20px;
 }
 
 .enlace {
