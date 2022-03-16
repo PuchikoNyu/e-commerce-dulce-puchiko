@@ -12,15 +12,16 @@ const Cards = () => {
     useEffect (() => {
 
         if (categoryId) {
-
-        } else {
+            
             getFetch
-            .then ((respuesta) => {
-            return respuesta
-            })
             .then((resp) => setProductos(resp.filter(prod => prod.categoria === categoryId )))
             .catch(err => console.log(err))
             .finally(()=> setLoading(false))
+        } else {
+            getFetch
+            .then ((respuesta) => {
+                setProductos(respuesta)
+            })
         }
 }, [categoryId])
     
@@ -29,7 +30,7 @@ const Cards = () => {
             {   loading ? <h2>Cargando...</h2>
                 :
                 productos.map((prod) =>
-                    <div key ={prod.id} className="tarjeta">
+                    <div key={prod.id} className="tarjeta">
                         <img src={prod.img} alt={prod.nombre} />
                         <h3> {prod.nombre} </h3>
                         <p> Tipo: {prod.tipo} </p>
@@ -37,7 +38,7 @@ const Cards = () => {
                         <p> Precio: ${prod.precio} </p>
                         <ItemCount />
                         <button className="botonUno">Agregar</button>
-                        <Link to={`description/${prod.Id}`} className="botonUno">
+                        <Link to={`/description/${prod.id}`} className="botonUno">
                             <button>Descripción</button>
                         </Link>
                     </div>

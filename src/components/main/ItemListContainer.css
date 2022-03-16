@@ -103,3 +103,31 @@ ul.slider li:target {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.tarjetaDescripcion {
+    display: flex;
+    flex-direction: row;
+    background-color: #272525;
+    color: #fafafa;
+    width: 800px;
+    height: 400px;
+    border: #272525;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 4px;
+}
+.tarjetaDescripcion img {
+    margin: 4px;
+    width: 400px;
+    border-radius: 4px;
+}
+.tarjetaDescripcion div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.tarjetaDescripcion h4 {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: small;
+    text-align: justify;
+}
