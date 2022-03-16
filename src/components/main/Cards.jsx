@@ -12,15 +12,16 @@ const Cards = () => {
     useEffect (() => {
 
         if (categoryId) {
-            
+
             getFetch
-            .then((resp) => setProductos(resp.filter(prod => prod.categoria === categoryId )))
+            .then((resp) => setProductos(resp.filter(prod => prod.categoria == categoryId )))
             .catch(err => console.log(err))
             .finally(()=> setLoading(false))
         } else {
             getFetch
             .then ((respuesta) => {
                 setProductos(respuesta)
+                setLoading(false)
             })
         }
 }, [categoryId])
@@ -38,7 +39,7 @@ const Cards = () => {
                         <p> Precio: ${prod.precio} </p>
                         <ItemCount />
                         <button className="botonUno">Agregar</button>
-                        <Link to={`/description/${prod.id}`} className="botonUno">
+                        <Link to={`description/${prod.id}`} className="botonUno">
                             <button>Descripción</button>
                         </Link>
                     </div>

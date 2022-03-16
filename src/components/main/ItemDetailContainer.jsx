@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemDetail from './ItemDetail';
 import { getFetch } from './ItemsList';
+import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {
 
@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
 
     useEffect (() => {
         getFetch
-        .then(resp => setProducto(resp.find(prod => prod.Id === descriptionId )))
+        .then(resp => setProducto(resp.find(prod => prod.id == descriptionId )))
 
     }, [descriptionId])
 
