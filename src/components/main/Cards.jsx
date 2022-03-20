@@ -49,7 +49,7 @@ const Cards = () => {
                     <button>Ir al Carrito</button>
                 </Link>
                         :
-                            <ItemCount  initial={1} stock={5} onAdd={onAdd} />
+                            <ItemCount  inicio={1} stock={5} onAdd={onAdd} />
                         }
 
                         <Link to={`/description/${prod.id}`}>
