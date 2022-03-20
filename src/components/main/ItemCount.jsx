@@ -31,4 +31,4 @@ function ItemCount ({inicio, stock, onAdd}) {
     )
 };
 
-export default ItemCount;
+export default ItemCount
