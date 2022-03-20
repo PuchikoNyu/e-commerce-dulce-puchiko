@@ -1,31 +1,32 @@
 import React from "react";
 import {useState} from 'react';
 
-function ItemCount ({}) {
+function ItemCount ({inicio, stock, onAdd}) {
 
     const [contador, setCount]= useState(1)
 
     const suma = () => {
-        if (contador >= 1 && contador <5) {
+        if (contador < stock) {
             setCount (contador+1)
-        } else {
-            console.log(" no se puede")
-        }
+        } 
     }
 
     const resta = () => {
-        if (contador > 1) {
+        if (contador > inicio) {
             setCount (contador-1)
-        } else {
-            console.log(" no se puede")
         }
+    }
+
+    const agregar = () => {
+        onAdd (contador)
     }
 
     return (
         <div>
-            <button onClick= { resta } className="botonUno">-</button>
+            <button onClick= { resta }>-</button>
             <label> { contador } </label>
-            <button onClick= { suma } className="botonUno">+</button>
+            <button onClick= { suma }>+</button>
+            <button onClick={ agregar }> Agregar</button>
         </div>
     )
 };

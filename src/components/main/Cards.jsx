@@ -5,6 +5,12 @@ import { getFetch } from "./ItemsList";
 
 const Cards = () => {
 
+    const [contador, setCount] = useState (null)
+    const onAdd = (cant) =>{
+        console.log(cant)
+        setCount(cant)
+    }
+
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
@@ -37,9 +43,16 @@ const Cards = () => {
                         <p> Tipo: {prod.tipo} </p>
                         <p> Variedad: {prod.variedad} </p>
                         <p> Precio: ${prod.precio} </p>
-                        <ItemCount />
-                        <button className="botonUno">Agregar</button>
-                        <Link to={`/description/${prod.id}`} className="botonUno">
+
+                        { contador ?
+                <Link to='/cart'>
+                    <button>Ir al Carrito</button>
+                </Link>
+                        :
+                            <ItemCount  initial={1} stock={5} onAdd={onAdd} />
+                        }
+
+                        <Link to={`/description/${prod.id}`}>
                             <button>Descripción</button>
                         </Link>
                     </div>
