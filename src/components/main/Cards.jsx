@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
+import { appContext } from "../../App";
 import ItemCount from './ItemCount';
 import { getFetch } from "./ItemsList";
 
@@ -31,12 +32,14 @@ const Cards = () => {
             })
         }
 }, [categoryId])
+
+const {prods} = useContext(appContext);
     
     return (
         <div className="items">
             {   loading ? <h2>Cargando...</h2>
                 :
-                productos.map((prod) =>
+                prods.map((prod) =>
                     <div key={prod.id} className="tarjeta">
                         <img src={prod.img} alt={prod.nombre} />
                         <h3> {prod.nombre} </h3>

@@ -3,7 +3,7 @@ import Cards from "./Cards";
 import Carrousel from "./Carrousel";
 import './ItemListContainer.css';
 
-const ItemListContainer = ( {saludo, nombre} ) => {
+const ItemListContainer = ( ) => {
     return(
         <div className="main">
             <Carrousel />

@@ -449,7 +449,7 @@ export const getFetch = new Promise((resolve, reject) => {
     if (url === 'flor.com') {
         setTimeout(() => {
             resolve(productos);
-        }, 3000);
+        }, 1000);
 
     } else {
         reject("404 not found")
