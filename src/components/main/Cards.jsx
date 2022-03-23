@@ -1,16 +1,9 @@
 import { useState, useEffect, useContext } from "react";
 import { Link, useParams } from "react-router-dom";
-import { appContext } from "../../App";
 import ItemCount from './ItemCount';
 import { getFetch } from "./ItemsList";
 
 const Cards = () => {
-
-    const [contador, setCount] = useState (null)
-    const onAdd = (cant) =>{
-        console.log(cant)
-        setCount(cant)
-    }
 
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
@@ -32,28 +25,18 @@ const Cards = () => {
             })
         }
 }, [categoryId])
-
-const {prods} = useContext(appContext);
     
     return (
         <div className="items">
             {   loading ? <h2>Cargando...</h2>
                 :
-                prods.map((prod) =>
+                productos.map((prod) =>
                     <div key={prod.id} className="tarjeta">
                         <img src={prod.img} alt={prod.nombre} />
                         <h3> {prod.nombre} </h3>
                         <p> Tipo: {prod.tipo} </p>
                         <p> Variedad: {prod.variedad} </p>
                         <p> Precio: ${prod.precio} </p>
-
-                        { contador ?
-                <Link to='/cart'>
-                    <button>Ir al Carrito</button>
-                </Link>
-                        :
-                            <ItemCount  inicio={1} stock={5} onAdd={onAdd} />
-                        }
 
                         <Link to={`/description/${prod.id}`}>
                             <button>Descripción</button>

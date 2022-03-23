@@ -131,3 +131,8 @@ ul.slider li:target {
     font-size: small;
     text-align: justify;
 }
+.cart{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
