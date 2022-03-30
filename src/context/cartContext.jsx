@@ -17,11 +17,16 @@ function CartProvider({children}) {
         setCartList([])
     }
 
+    const anidarCarrito = (id) => {
+        return cartList.some ( (prod) => prod.id === id )
+    }
+
     return (
         <CartContext.Provider value= {{
             cartList,
             agregarCarrito,
             vaciarCarrito,
+            anidarCarrito
         }}>
             {children}
         </CartContext.Provider>
