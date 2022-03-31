@@ -1,43 +1,41 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
-import ItemCount from "./ItemCount"
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import ItemCount from "./ItemCount";
 import { useCartContext } from "../../context/CartContext";
 
-const ItemDetail = ({producto}) => {
+const ItemDetail = ({ producto }) => {
+  const [contador, setCount] = useState(null);
 
-    const [contador, setCount] = useState (null)
+  const { agregarCarrito, cartList } = useCartContext();
 
-    const {agregarCarrito, cartList} = useCartContext()
+  const onAdd = (cant) => {
+    console.log(cant);
+    setCount(cant);
+    agregarCarrito({ ...producto, cantidad: cant });
+  };
+  console.log(cartList);
 
-    const onAdd = (cant) =>{
-        console.log(cant)
-        setCount(cant)
-        agregarCarrito({...producto, cantidad: cant})
-    }
-    console.log(cartList)
-
-    return (
-        <div className="tarjetaDescripcion">
-            <img src={producto.img} alt={producto.nombre} />
-            <div>
-                <h3> {producto.nombre} </h3>
-                <h4> {producto.descripcion} </h4>
-                <p> {producto.descripcion2} </p>
-                <p> Precio: ${producto.precio} </p>
-                { contador ?
-                <Link to='/cart'>
-                    <button>Ir al Carrito</button>
-                    :
-                    <Link to='/'>
-                        <button>Seguir Comprando</button>
-                    </Link>
-                </Link>
-                :
-                    <ItemCount  inicio={1} stock={10} onAdd={onAdd} />
-                }
-            </div>
-        </div>
-    )
-}
+  return (
+    <div className="tarjetaDescripcion">
+      <img src={producto.img} alt={producto.nombre} />
+      <div>
+        <h3> {producto.nombre} </h3>
+        <h4> {producto.descripcion} </h4>
+        <p> {producto.descripcion2} </p>
+        <p> Precio: ${producto.precio} </p>
+        {contador ? (
+          <Link to="/cart">
+            <button>Terminar compra</button>:
+            <Link to="/">
+              <button>Seguir Comprando</button>
+            </Link>
+          </Link>
+        ) : (
+          <ItemCount inicio={1} stock={10} onAdd={onAdd} />
+        )}
+      </div>
+    </div>
+  );
+};
 
 export default ItemDetail;

@@ -136,3 +136,6 @@ ul.slider li:target {
     flex-direction: row;
     justify-content: space-evenly;
 }
+.cart1{
+    color: #fafafa;
+}
