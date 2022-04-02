@@ -6,14 +6,13 @@ import { useCartContext } from "../../context/CartContext";
 const ItemDetail = ({ producto }) => {
   const [contador, setCount] = useState(null);
 
-  const { agregarCarrito, cartList } = useCartContext();
+  const { agregarCarrito } = useCartContext();
 
   const onAdd = (cant) => {
-    console.log(cant);
     setCount(cant);
     agregarCarrito({ ...producto, cantidad: cant });
   };
-  console.log(cartList);
+
 
   return (
     <div className="tarjetaDescripcion">

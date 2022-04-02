@@ -18,10 +18,10 @@ const Cards = () => {
                 const docs = resultado.docs
 
                 const lista = docs.map((doc)=>{
-                    const id = doc.id
+                    const fid = doc.id
                     const data = doc.data()
                     const producto = {
-                        id: id,
+                        fid: fid,
                         ...data
                     }
                     return producto
@@ -47,14 +47,14 @@ const Cards = () => {
             {   loading ? <h2>Cargando...</h2>
                 :
                 productos.map((prod) =>
-                    <div key={prod.id} className="tarjeta">
+                    <div key={prod.fid} className="tarjeta">
                         <img src={prod.img} alt={prod.nombre} />
                         <h3> {prod.nombre} </h3>
                         <p> Tipo: {prod.tipo} </p>
                         <p> Variedad: {prod.variedad} </p>
                         <p> Precio: ${prod.precio} </p>
 
-                        <Link to={`/description/${prod.id}`}>
+                        <Link to={`/description/${prod.fid}`}>
                             <button>Descripción</button>
                         </Link>
                     </div>
