@@ -6,13 +6,13 @@ import ItemDetail from './ItemDetail';
 
 const ItemDetailContainer = () => {
 
+
     const [producto, setProducto] = useState({})
     const { descriptionId } = useParams()
 
     useEffect (() => {
         getFetch
         .then(resp => setProducto(resp.find(prod => prod.id == descriptionId )))
-
     }, [descriptionId])
 
     return (

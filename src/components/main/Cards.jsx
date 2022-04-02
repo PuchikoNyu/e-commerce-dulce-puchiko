@@ -1,29 +1,54 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import ItemCount from './ItemCount';
+import { getDocs, collection } from "firebase/firestore";
 import { getFetch } from "./ItemsList";
+import { db } from "../../firebase/baseDatos";
 
 const Cards = () => {
 
     const [productos, setProductos] = useState([])
+
     const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
 
     useEffect (() => {
 
-        if (categoryId) {
+        const catalogo = collection (db, "productos")
 
-            getFetch
-            .then((resp) => setProductos(resp.filter(prod => prod.categoria == categoryId )))
-            .catch(err => console.log(err))
-            .finally(()=> setLoading(false))
-        } else {
-            getFetch
-            .then ((respuesta) => {
-                setProductos(respuesta)
-                setLoading(false)
+        getDocs(catalogo)
+            .then((resultado) =>{
+                const docs = resultado.docs
+
+                const lista = docs.map((doc)=>{
+                    const id = doc.id
+                    const data = doc.data()
+                    const producto = {
+                        id: id,
+                        ...data
+                    }
+                    return producto
+                })
+
+                setProductos(lista)
+
             })
-        }
+            .catch((error)=>{
+                console.log(error)
+        })
+
+        // if (categoryId) {
+
+        //     getFetch
+        //     .then((resp) => setProductos(resp.filter(prod => prod.categoria == categoryId )))
+        //     .catch(err => console.log(err))
+        //     .finally(()=> setLoading(false))
+        // } else {
+        //     getFetch
+        //     .then ((respuesta) => {
+        //         setProductos(respuesta)
+        //         setLoading(false)
+        //     })
+        // }
 }, [categoryId])
     
     return (

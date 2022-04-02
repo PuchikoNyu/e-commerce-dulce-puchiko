@@ -152,7 +152,7 @@ export const productos = [{
         "img": "/media/creCor.jpeg",
         "stock": 100,
         "descripcion": "Su fórmula a base de Manteca de Karité y Aloe Vera, enriquecida con vitamina E, brinda un cuidado natural para vivir y sentir una piel saludable.",
-        "descripcion2": "Vegano, libre de químicos y aceite de palma. Aprobado por ANMAT. Envase de vidrio con válvula dosificadora de 150ml"
+        "descripcion2": "Vegano, libre de químicos y aceite de palma. Aprobado por ANMAT. Envase de vidrio con válvula dosificadora de 150ml."
     },
     {
         "id": 13,
@@ -242,7 +242,7 @@ export const productos = [{
         "precio": 550,
         "img": "/media/jabCal.jpeg",
         "stock": 300,
-        "descripcion": "Ideal para pieles sensibles y para todo tipo de piel en general. Gracias a las propiedades cicatrizantes y regenerativas de la Caléndula, ésta variedad es la aliada natural para cuidar naturalmente la piel. ",
+        "descripcion": "Ideal para pieles sensibles y para todo tipo de piel en general. Gracias a las propiedades cicatrizantes y regenerativas de la Caléndula, ésta variedad es la aliada natural para cuidar naturalmente la piel.",
         "descripcion2": "PRODUCTO APROBADO POR ANMAT. PESO: 100grs. Biodegradable. Cruelty Free & Vegano. Libre de químicos, sulfatos y parabenos. SIN ACEITE DE PALMA."
     },
     {
@@ -252,10 +252,10 @@ export const productos = [{
         "variedad": "especiales",
         "tipo": "jazmin",
         "nombre": "Jabón Esencial de Jazmín",
-        "precio": 5500,
+        "precio": 550,
         "img": "/media/jabJaz.jpeg",
         "stock": 300,
-        "descripcion": "Ideal para todo tipo de piel. Gracias a las propiedades del Jazmín, este jabón es súper hidratante y su agradable aroma favorece la relajación mental y mejora el estado de ánimo. ",
+        "descripcion": "Ideal para todo tipo de piel. Gracias a las propiedades del Jazmín, este jabón es súper hidratante y su agradable aroma favorece la relajación mental y mejora el estado de ánimo.",
         "descripcion2": "PRODUCTO APROBADO POR ANMAT. PESO: 100grs. Biodegradable. Cruelty Free & Vegano. Libre de químicos, sulfatos y parabenos. SIN ACEITE DE PALMA."
     },
     {
@@ -307,8 +307,8 @@ export const productos = [{
         "precio": 650,
         "img": "/media/peineMadera.jpeg",
         "stock": 100,
-        "descripcion": "PEINES DE MADERA MACIZA DE PARAISO CON MANGO, SIN MANGO, PARA RULOS. NO GENERA ESTATICA",
-        "descripcion2": "SIN TRATAMIENTO QUÍMICO NI CERAS. ANTIFRIZZ"
+        "descripcion": "PEINES DE MADERA MACIZA DE PARAISO CON MANGO, SIN MANGO, PARA RULOS. NO GENERA ESTATICA.",
+        "descripcion2": "SIN TRATAMIENTO QUÍMICO NI CERAS. ANTIFRIZZ."
     },
     {
         "id": 25,
@@ -355,12 +355,12 @@ export const productos = [{
         "subcategoria": "cepillo",
         "variedad": "madera",
         "tipo": "exfoliante",
-        "nombre": "Cepillo de cuerpo Exfoliante",
+        "nombre": "Cepillo Corporal Exfoliante",
         "precio": 800,
         "img": "/media/cepExf.jpeg",
         "stock": 100,
         "descripcion": "MADERA DE PALO BLANCO Y FILAMENTOS BIODEGRADABLES - El cepillado en seco tiene múltiples beneficios para nuestra salud y bienestar: Estimula el sistema circulatorio, favoreciendo una adecuada circulación sanguínea.",
-        "descripcion2": "CON CORDÓN DE ALGODÓN - MEDIDAS: 18x6cm"
+        "descripcion2": "CON CORDÓN DE ALGODÓN - MEDIDAS: 18x6cm."
     },
     {
         "id": 29,
@@ -372,7 +372,7 @@ export const productos = [{
         "precio": 400,
         "img": "/media/cepDental.jpeg",
         "stock": 300,
-        "descripcion": "Es 97% Biodegradable. Vida útil y calidad. Diseño estético. ",
+        "descripcion": "Es 97% Biodegradable. Vida útil y calidad. Diseño estético.",
         "descripcion2": "Sustentable. El precio corresponde a 1 unidad"
     },
     {
@@ -412,7 +412,7 @@ export const productos = [{
         "img": "/media/jabonera.jpeg",
         "stock": 150,
         "descripcion": "JABONERA DE MADERA CURADA - Capacidad para dos pastillas de shampoo sólido/jabón.",
-        "descripcion2": "Medidas: 17 x 9.5 cm"
+        "descripcion2": "Medidas: 17 x 9.5 cm."
     },
     {
         "id": 33,
