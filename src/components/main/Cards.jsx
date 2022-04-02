@@ -1,13 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { getDocs, collection } from "firebase/firestore";
-import { getFetch } from "./ItemsList";
 import { db } from "../../firebase/baseDatos";
 
 const Cards = () => {
 
     const [productos, setProductos] = useState([])
-
     const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
 
@@ -29,27 +27,20 @@ const Cards = () => {
                     return producto
                 })
 
-                setProductos(lista)
+                if (categoryId) {
+                    setProductos(lista.filter(prod => prod.categoria == categoryId ))
+                    setLoading(false)            
+                } else {
+                    setProductos(lista)
+                    setLoading(false)
+                }
 
             })
             .catch((error)=>{
                 console.log(error)
         })
 
-        // if (categoryId) {
-
-        //     getFetch
-        //     .then((resp) => setProductos(resp.filter(prod => prod.categoria == categoryId )))
-        //     .catch(err => console.log(err))
-        //     .finally(()=> setLoading(false))
-        // } else {
-        //     getFetch
-        //     .then ((respuesta) => {
-        //         setProductos(respuesta)
-        //         setLoading(false)
-        //     })
-        // }
-}, [categoryId])
+    }, [categoryId])
     
     return (
         <div className="items">
