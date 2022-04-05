@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { getDocs, collection } from "firebase/firestore";
+import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../firebase/baseDatos";
 
 const Cards = () => {
@@ -8,39 +8,43 @@ const Cards = () => {
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
     const { categoryId } = useParams()
+    const catalogo = collection (db, "productos")
 
-    useEffect (() => {
+    const getCatalogo = (query) => {
+        getDocs(query)
+        .then((resultado) =>{
+            const docs = resultado.docs
+            const lista = docs.map((doc)=>{
+                const fid = doc.id
+                const data = doc.data()
+                const producto = {
+                    fid: fid,
+                    ...data
+                }
+                return producto
+            })
+            setProductos(lista)
+            
+            })
+            
+            .then(() => {
+                setLoading(false)
 
-        const catalogo = collection (db, "productos")
+        })
+        .catch((error)=>{
+            console.log(error)
+        })
+    }
 
-        getDocs(catalogo)
-            .then((resultado) =>{
-                const docs = resultado.docs
-
-                const lista = docs.map((doc)=>{
-                    const fid = doc.id
-                    const data = doc.data()
-                    const producto = {
-                        fid: fid,
-                        ...data
-                    }
-                    return producto
-                })
+    useEffect (() => {    
 
                 if (categoryId) {
-                    setProductos(lista.filter(prod => prod.categoria == categoryId ))
-                    setLoading(false)            
+                    const filterFB = query(catalogo, where("categoria", "==", categoryId))
+                    getCatalogo(filterFB)          
                 } else {
-                    setProductos(lista)
-                    setLoading(false)
+                    getCatalogo(catalogo)
                 }
-
-            })
-            .catch((error)=>{
-                console.log(error)
-        })
-
-    }, [categoryId])
+        }, [categoryId])
     
     return (
         <div className="items">
