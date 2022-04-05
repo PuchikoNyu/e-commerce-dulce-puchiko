@@ -23,12 +23,14 @@ const ItemDetail = ({ producto }) => {
         <p> {producto.descripcion2} </p>
         <p> Precio: ${producto.precio} </p>
         {contador ? (
-          <Link to="/cart">
-            <button>Terminar compra</button>:
-            <Link to="/">
-              <button>Seguir Comprando</button>
+          <>
+            <Link to="/cart">
+              <button>Terminar compra</button>:
             </Link>
-          </Link>
+            <Link to="/">
+            <button>Seguir Comprando</button>
+            </Link>          
+          </>
         ) : (
           <ItemCount inicio={1} stock={10} onAdd={onAdd} />
         )}
