@@ -25,7 +25,7 @@ const ItemDetail = ({ producto }) => {
         {contador ? (
           <>
             <Link to="/cart">
-              <button>Terminar compra</button>:
+              <button>Ir al Carrito</button>:
             </Link>
             <Link to="/">
             <button>Seguir Comprando</button>
