@@ -26,10 +26,6 @@ function CartProvider({ children }) {
     setCartList([]);
   };
 
-  // const finalizarCompra = () => {
-  //   vaciarCarrito();
-  // };
-
   const eliminarId = (prodId) => {
     const copiaCarrito = [...cartList];
     const item = copiaCarrito.find((prod) => prod.id === prodId);
@@ -45,8 +41,7 @@ function CartProvider({ children }) {
         agregarCarrito,
         vaciarCarrito,
         anidarCarrito,
-        eliminarId,
-        // finalizarCompra
+        eliminarId
       }}
     >
       {children}

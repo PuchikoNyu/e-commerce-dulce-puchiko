@@ -1,7 +1,7 @@
 import { useCartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { addDoc, collection, getFirestore } from "firebase/firestore"
+import { addDoc, collection, getFirestore, serverTimestamp } from "firebase/firestore";
 
 function Cart() {
 
@@ -11,7 +11,7 @@ function Cart() {
 
   const [id, setId] = useState('')
 
-  const { cartList, vaciarCarrito, eliminarId, finalizarCompra } = useCartContext();
+  const { cartList, vaciarCarrito, eliminarId } = useCartContext();
 
   const generarOrden = async (e) => {
     e.preventDefault();
@@ -19,23 +19,23 @@ function Cart() {
     let orden = {}
 
     orden.buyer = dataForm
-    // orden.total = precioTotal();
 
     orden.items = cartList.map(cartItem => {
       const id = cartItem.id;
       const nombre = cartItem.nombre;
+      const cantidad = cartItem.cantidad;
       const precio = cartItem.precio * cartItem.cantidad;
 
-    return {id, nombre, precio} 
+    return {id, nombre, cantidad, precio} 
   })
-  console.log(orden)
+  orden.date= serverTimestamp()
 
   const db= getFirestore()
-  const queryCollectionSet = collection(db, "orders")
+  const queryCollectionSet = collection(db, "ordenes")
   addDoc(queryCollectionSet, orden)
   .then(resp => setId(resp.id))
+  .then(vaciarCarrito())
   .catch(err => console.error(err))
-  .finally(() => console.log('terminado'))
 
   }
   
@@ -48,10 +48,14 @@ function Cart() {
   }
 
   return (
-    <>
+    <div className="fA">
       {cartList.length === 0 ? (
         <>
+          {id ? <h3 className="h3">Numero de orden: ${id}</h3> :
+          <></>}
+          <br />
           <p>Su carrito se encuentra vacio...</p>
+          <br />
           <Link to="/">
             <button>Ir al Inicio</button>
           </Link>
@@ -59,11 +63,12 @@ function Cart() {
       ) : (
         <>
           {cartList.map((prod) => (
-            <div className="cart">
+            <div className="cart" key={prod.id}>
               <img src={prod.img} alt={prod.nombre} />
               <p>Produto: {prod.nombre}</p>
               <p>Cantidad: {prod.cantidad} u.</p>
               <p>Precio: $ {prod.precio * prod.cantidad}</p>
+              
               <button onClick={() => eliminarId(prod.id)}> X </button>
             </div>
           ))}
@@ -107,16 +112,14 @@ function Cart() {
                   required="required"
                   onChange={handleChange}
               /><br />
-              <p> * Al marcar seleccionar compra se generará el talon de pago con su numero de orden.</p>
+              <p> * Al marcar finalizar compra se generará su numero de orden.</p>
               <button>Finalizar Compra</button>
           </form>
           <button onClick={vaciarCarrito}> Vaciar carrito </button>
         </>
       )}
-    </>
+    </ div>
   );
 }
 
 export default Cart;
-
-// onClick={ finalizarCompra }
