@@ -21,9 +21,9 @@ function Cart() {
     orden.buyer = dataForm
     // orden.total = precioTotal();
 
-    orden. items = cartList.map(cartItem => {
+    orden.items = cartList.map(cartItem => {
       const id = cartItem.id;
-      const nombre = cartItem.name;
+      const nombre = cartItem.nombre;
       const precio = cartItem.precio * cartItem.cantidad;
 
     return {id, nombre, precio} 
@@ -31,13 +31,14 @@ function Cart() {
   console.log(orden)
 
   const db= getFirestore()
-  const queryCollectionSet = collection(db, 'orders')
+  const queryCollectionSet = collection(db, "orders")
   addDoc(queryCollectionSet, orden)
   .then(resp => setId(resp.id))
   .catch(err => console.error(err))
-  .finally(() => console.log('termino'))
+  .finally(() => console.log('terminado'))
 
   }
+  
   const handleChange = (e) => {
       setDataForm (
       {
@@ -57,49 +58,59 @@ function Cart() {
         </>
       ) : (
         <>
-          {cartList.map((item) => (
+          {cartList.map((prod) => (
             <div className="cart">
-              <p>Produto: {item.nombre}</p>
-              <p>Cantidad: {item.cantidad} u.</p>
-              <p>Precio: $ {item.precio * item.cantidad}</p>
-              <button onClick={() => eliminarId(item.id)}> X </button>
+              <img src={prod.img} alt={prod.nombre} />
+              <p>Produto: {prod.nombre}</p>
+              <p>Cantidad: {prod.cantidad} u.</p>
+              <p>Precio: $ {prod.precio * prod.cantidad}</p>
+              <button onClick={() => eliminarId(prod.id)}> X </button>
             </div>
           ))}
-          <p>
+          <p className="total">
             Precio total: $
             {cartList.reduce(
-              (acc, item) => acc + item.precio * item.cantidad,
+              (acc, prod) => acc + prod.precio * prod.cantidad,
               0
             )}
           </p>
-          <button onClick={vaciarCarrito}> Vaciar carrito </button>
           <form
             onSubmit={generarOrden}
           >
+            <p>Nombre:</p>
               <input
                   type="text"
                   name="name"
                   placeholder="nombre completo"
                   value={dataForm.name}
+                  required="required"
+                  maxLength={30}
                   onChange={handleChange}
               /><br />
+            <p>Teléfono:</p>
               <input
-                  type="text"
+                  type="phone"
                   name="phone"
                   placeholder="teléfono"
                   value={dataForm.phone}
+                  required="required"
+                  minLength={8}
+                  maxLength={10}
                   onChange={handleChange}
               /><br />
+            <p>Mail:</p>
               <input
                   type="email"
                   name="email"
                   placeholder="email@email.com"
                   value={dataForm.email}
+                  required="required"
                   onChange={handleChange}
               /><br />
-              <p> Al marcar seleccionar compra se generará el talon de pago con su numero de orden.</p>
+              <p> * Al marcar seleccionar compra se generará el talon de pago con su numero de orden.</p>
               <button>Finalizar Compra</button>
           </form>
+          <button onClick={vaciarCarrito}> Vaciar carrito </button>
         </>
       )}
     </>

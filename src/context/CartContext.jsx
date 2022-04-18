@@ -26,9 +26,9 @@ function CartProvider({ children }) {
     setCartList([]);
   };
 
-  const finalizarCompra = () => {
-    vaciarCarrito();
-  };
+  // const finalizarCompra = () => {
+  //   vaciarCarrito();
+  // };
 
   const eliminarId = (prodId) => {
     const copiaCarrito = [...cartList];
@@ -46,7 +46,7 @@ function CartProvider({ children }) {
         vaciarCarrito,
         anidarCarrito,
         eliminarId,
-        finalizarCompra
+        // finalizarCompra
       }}
     >
       {children}

@@ -7,6 +7,18 @@ h1{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #272525;
+    border-radius: 5px;
+    margin: 10px 5px 10px 5px;
+    padding: 30px 7px 30px 7px;
+    background-color: #272525;
+    color: #fafafa;
+}
 
 .main {
     display: flex;
@@ -41,12 +53,9 @@ ul.slider {
     width: 100%;
     height: 300px;
     transition: all;
-    
 }
 ul.slider li {
     position: absolute;
-    left: 0px;
-    top: 0px;
     opacity: 0;
     width: inherit;
     height: inherit;
@@ -77,8 +86,6 @@ ul.slider li:target {
     text-decoration: none;
     background-color: #272525;
     padding: 10px;
-    width: 10px;
-    height: 10px;
     border-radius: 100%;
 }
 .tarjeta {
@@ -134,8 +141,38 @@ ul.slider li:target {
 .cart{
     display:flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: stretch;
+    border: 5px solid #272525;
+    border-radius: 5px;
+    margin: 10px 5px 10px 5px;
+    padding: 10px;
+    height: 100px;
+    background-color: #272525;
+    color: #fafafa;
+}
+.cart p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .cart1{
     color: #fafafa;
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #272525;
+    color: #fafafa;
+    border: 2px solid #272525;
+    border-radius: 5px;
+    margin: 10px 5px 10px 5px;
+    padding: 10px;
+    font-size: large;
+}
+.centrado{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }

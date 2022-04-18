@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
     }, [descriptionId])
 
     return (
-            <div>
+            <div className='centrado'>
                 { loading ? <h2>Cargando...</h2>
                 :
                 <ItemDetail producto={producto}/>
@@ -32,4 +32,4 @@ const ItemDetailContainer = () => {
             </div>
 )};
 
-export default ItemDetailContainer
+export default ItemDetailContainer;

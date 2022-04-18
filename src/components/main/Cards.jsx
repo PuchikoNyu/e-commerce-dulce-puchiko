@@ -53,7 +53,6 @@ const Cards = () => {
                         <p> Tipo: {prod.tipo} </p>
                         <p> Variedad: {prod.variedad} </p>
                         <p> Precio: ${prod.precio} </p>
-
                         <Link to={`/description/${prod.fid}`}>
                             <button>Descripción</button>
                         </Link>
