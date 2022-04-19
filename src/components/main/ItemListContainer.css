@@ -143,7 +143,7 @@ ul.slider li:target {
     font-size: small;
     text-align: justify;
 }
-.cart{
+.cart {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -156,15 +156,15 @@ ul.slider li:target {
     background-color: #272525;
     color: #fafafa;
 }
-.cart p{
+.cart p {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.cart1{
+.cart1 {
     color: #fafafa;
 }
-.total{
+.total {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -176,7 +176,7 @@ ul.slider li:target {
     padding: 10px;
     font-size: large;
 }
-.centrado{
+.centrado {
     display: flex;
     flex-direction: column;
     justify-content: center;
