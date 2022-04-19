@@ -13,7 +13,6 @@ const ItemDetail = ({ producto }) => {
     agregarCarrito({ ...producto, cantidad: cant });
   };
 
-
   return (
     <div className="tarjetaDescripcion">
       <img src={producto.img} alt={producto.nombre} />

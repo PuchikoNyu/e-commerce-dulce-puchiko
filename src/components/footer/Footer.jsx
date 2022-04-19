@@ -5,9 +5,12 @@ import './Footer.css';
 
 const Footer = () => {
     return(
-        <footer>
-            <Redes />
-            <Wsapp />
+        <footer className="desarrollado">
+            <div>
+                <Redes />
+                <Wsapp />
+            </div>
+            <p>Desarrollado por Florencia Belén De Souza</p>
         </footer>
     );
 };

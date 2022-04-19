@@ -60,3 +60,12 @@ footer {
     -webkit-filter: brightness(1.2);
             filter: brightness(1.2);
 }
+.desarrollado {
+    display: flex;
+    flex-direction: column;
+}
+.desarrollado p {
+    color: #d5baba;
+    margin-top: 20px;
+    font-size:smaller;
+}

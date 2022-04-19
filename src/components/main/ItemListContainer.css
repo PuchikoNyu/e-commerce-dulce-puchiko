@@ -27,7 +27,8 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    align-content: space-between;
     min-height: 75.8vh;
 }
 .enlace {
@@ -177,7 +178,7 @@ ul.slider li:target {
 }
 .centrado{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
 }
 .fA {
