@@ -117,7 +117,8 @@ ul.slider li:target {
 .tarjetaDescripcion {
     display: flex;
     flex-direction: row;
-    
+    justify-content: space-around;
+    align-items: stretch;
     background-color: #272525;
     color: #fafafa;
     width: 800px;
@@ -136,6 +137,7 @@ ul.slider li:target {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: stretch;
 }
 .tarjetaDescripcion h4 {
     margin-left: 40px;
