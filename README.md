@@ -1,3 +1,12 @@
+Descripción
+
+E-Commerce sobre Sentida Botánica, marca de cosmética natural, vegan, ecofriendly.
+
+Demostración
+
+![Diseño sin título](https://user-images.githubusercontent.com/90360929/163902815-1efab665-2f6f-4a7d-a55e-0f8fe7ee3397.gif)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
